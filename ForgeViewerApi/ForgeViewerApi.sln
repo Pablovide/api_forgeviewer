@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Distributed Services", "1.Distributed Services", "{F80DE9C4-A5AA-4D04-AD3E-E63459BD241D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Service Layer", "2.Service Layer", "{2EE0EAC2-58A2-4DF8-94D2-DB3AE7E5896C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgeViewer.WebApi", "ForgeViewer.WebApi\ForgeViewer.WebApi.csproj", "{CD77EC1E-1476-4190-80E1-0B3B7A5A0966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgeViewer.Service.Contracts", "ForgeViewer.Service.Contracts\ForgeViewer.Service.Contracts.csproj", "{AEF78827-232C-4C33-A466-6A62C64B9C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgeViewer.Service.Impl", "ForgeViewer.Service.Impl\ForgeViewer.Service.Impl.csproj", "{140D6733-8397-4954-9359-5DEED7DBEBD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD77EC1E-1476-4190-80E1-0B3B7A5A0966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD77EC1E-1476-4190-80E1-0B3B7A5A0966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD77EC1E-1476-4190-80E1-0B3B7A5A0966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD77EC1E-1476-4190-80E1-0B3B7A5A0966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEF78827-232C-4C33-A466-6A62C64B9C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEF78827-232C-4C33-A466-6A62C64B9C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEF78827-232C-4C33-A466-6A62C64B9C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEF78827-232C-4C33-A466-6A62C64B9C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{140D6733-8397-4954-9359-5DEED7DBEBD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{140D6733-8397-4954-9359-5DEED7DBEBD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{140D6733-8397-4954-9359-5DEED7DBEBD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{140D6733-8397-4954-9359-5DEED7DBEBD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD77EC1E-1476-4190-80E1-0B3B7A5A0966} = {F80DE9C4-A5AA-4D04-AD3E-E63459BD241D}
+		{AEF78827-232C-4C33-A466-6A62C64B9C95} = {2EE0EAC2-58A2-4DF8-94D2-DB3AE7E5896C}
+		{140D6733-8397-4954-9359-5DEED7DBEBD9} = {2EE0EAC2-58A2-4DF8-94D2-DB3AE7E5896C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6CA0778-EA9F-4650-809C-9B1D2CA11C30}
+	EndGlobalSection
+EndGlobal
