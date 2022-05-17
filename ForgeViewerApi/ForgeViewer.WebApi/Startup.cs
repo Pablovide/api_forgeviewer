@@ -23,6 +23,11 @@ namespace ForgeViewer.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy("global", builder =>
+            {
+                builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+            }));
+
             services.AddSingleton<IForgeViewerConfiguration, ForgeViewerConfiguration>(_ => new ForgeViewerConfiguration(Configuration));
             services.AddSingleton<ITokenService, TokenService>();
             services.AddControllers();
@@ -47,6 +52,8 @@ namespace ForgeViewer.WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("global");
 
             app.UseEndpoints(endpoints =>
             {
