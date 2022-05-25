@@ -22,6 +22,12 @@ namespace ForgeViewer.Service.Impl.Services
             return token;
         }
 
+        public async Task<AutodeskToken> GetPrivateTokenAsync()
+        {
+            var token = await Get2LeggedTokenAsync(new Scope[] { Scope.BucketCreate, Scope.BucketRead, Scope.DataRead, Scope.DataCreate, Scope.ViewablesRead, Scope.BucketDelete, Scope.DataWrite });
+            return token;
+        }
+
         private async Task<AutodeskToken> Get2LeggedTokenAsync(Scope[] scopes)
         {
             TwoLeggedApi oauth = new TwoLeggedApi();

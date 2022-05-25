@@ -10,5 +10,6 @@ namespace ForgeViewer.Service.Contracts.Services
     public interface ITokenService
     {
         Task<AutodeskToken> GetPublicTokenAsync();
+        Task<AutodeskToken> GetPrivateTokenAsync();
     }
 }
