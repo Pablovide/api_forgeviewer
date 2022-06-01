@@ -10,18 +10,35 @@ namespace ForgeViewer.WebApi.Controllers
     [ApiController]
     public class OssController : ControllerBase
     {
-        private readonly IBucketService _bucketSetvice;
-        public OssController(IBucketService bucketSetvice)
+        private readonly IBucketService _bucketService;
+        private readonly IObjectService _objectService;
+        public OssController(IBucketService bucketSetvice, IObjectService objectService)
         {
-            _bucketSetvice = bucketSetvice;
+            _bucketService = bucketSetvice;
+            _objectService = objectService;
         }
-        
+
         [HttpGet("/buckets")]
         public async Task<IActionResult> GetAllBucketsAsync()
         {
             try
             {
-                var result = await _bucketSetvice.GetAllBucketsAsync();
+                var result = await _bucketService.GetAllBucketsAsync();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError(string.Empty, ex.Message);
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("/files/{bucketKey}")]
+        public async Task<IActionResult> GetFilesByBucketAsync(string bucketKey)
+        {
+            try
+            {
+                var result = await _objectService.GetFilesByBucketAsync(bucketKey);
                 return Ok(result);
             }
             catch (Exception ex)

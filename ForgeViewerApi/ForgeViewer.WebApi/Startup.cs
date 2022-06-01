@@ -32,6 +32,7 @@ namespace ForgeViewer.WebApi
             services.AddSingleton<ITokenService, TokenService>();
             services.AddSingleton<IMetadataService, MetadataService>();
             services.AddSingleton<IBucketService, BucketService>();
+            services.AddSingleton<IObjectService, ObjectService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
